@@ -29,23 +29,18 @@ function runTest(fn, count) {
 }
 
 
-var n = Math.pow(10, 9);
 
+var n = Math.pow(10, 9);
 
 var ms = runTest(function() {
 	return ~~(5/3);
 }, n)
-
 console.log('Double tilde took %s ms', ms);
 
-// reset the timer
 ms = runTest(function() {
 	return Math.floor(5/3);
 }, n);
-
 console.log('Math foor took %s ms', ms);
-// reset the timer
-var startTime = Date.now();
 
 ms = runTest(function() {
 	return (5/3)>>0;
